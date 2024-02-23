@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css" />
+    <!--- Icons --->
+    <script
+      src="https://kit.fontawesome.com/e78161c1f6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>To-do app</title>
+  </head>
+  <body>
+    <nav class="Menu" style="display: grid">
+      <div class="Menu-contents" id="main-pages">
+        <span class="links-page" id="Inbox"
+          ><i class="fa-solid fa-inbox"></i>Inbox</span
+        >
+        <span class="links-page" id="Today"
+          ><i class="fa-solid fa-star"></i>Hoje</span
+        >
+        <span class="links-page" id="Upcoming"
+          ><i class="fa-solid fa-calendar-week"></i>Essa Semana</span
+        >
+      </div>
+      <div class="Menu-contents" id="common-pages"></div>
+      <button class="buttons" id="btn-open-create-page-modal">
+        <i class="fa-solid fa-plus"></i>
+        Nova página
+      </button>
+    </nav>
+    <section class="Page">
+      <div class="topbar">
+        <button
+          class="buttons fa-solid fa-bars"
+          id="btn-menu"
+          name="close"
+        ></button>
+
+        <a
+          class="github-link"
+          target="_blank"
+          href="https://www.github.com/jhenriquem"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+      <div class="title-container">
+        <p id="title">Titulo</p>
+        <button class="buttons" id="btn-add-task">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+
+      <main class="tasks-list"></main>
+    </section>
+    <div class="create-page-modal">
+      <div class="icon-modal">
+        <i class="fa-solid fa-file"></i>
+      </div>
+      <div class="form">
+        <div>
+          <label for="">Nova página</label>
+          <button id="close-modal"><i class="fa-solid fa-close"></i></button>
+        </div>
+        <input type="text" id="input-name-new-page" />
+        <button id="btn-create-new-page">Criar</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
